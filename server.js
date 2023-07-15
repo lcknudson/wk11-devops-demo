@@ -20,12 +20,12 @@ rollbar.log('Hello world!')
 const students = ['Jimmy', 'Timothy', 'Jimothy']
 
 app.get('/', (req, res) => {
-    rollbar.info("HTMO served successfully");
+    rollbar.info("HTML served successfully");
     res.sendFile(path.join(__dirname, '/index.html'))
 })
 
 app.get('/api/students', (req, res) => {
-    rollbar.info("Someone go the list of students to load.");
+    rollbar.info("Someone got the list of students to load.");
     res.status(200).send(students)
 })
 
